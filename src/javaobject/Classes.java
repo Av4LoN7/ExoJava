@@ -61,8 +61,8 @@ public class Classes {
 		for(int i = 0; i < f.length; i++) {
 			f[i] = (Figure) FigureUtils.getRandomFigure();
 		}
-		
-		FigureUtils.getPoint(f);
+		System.out.println("\ntableau de figure -----");
+		System.out.println(Arrays.toString(FigureUtils.getPoint(f)));
 		
 	}
 

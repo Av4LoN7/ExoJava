@@ -1,5 +1,8 @@
 package javaobject;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 public class FigureUtils {
@@ -71,10 +74,21 @@ public class FigureUtils {
 	
 	
 	public static Point[] getPoint(Figure[] f) {
+		int total = 0;
 		for(int i = 0; i < f.length; i++) {
-			pArray[] = f[i].getPoint();
+			Point[] pointTemp;
+			pointTemp = f[i].getPoint();
+			total += pointTemp.length;
 		}
-		return pArray[];
+
+		ArrayList<Point> tempList = new ArrayList<Point>();
+
+		for(int i = 0; i < f.length ; i++) {
+			Point[] pointTemp;
+			pointTemp = f[i].getPoint();
+			Collections.addAll(tempList, pointTemp);
+		}
+		return tempList.toArray(new Point[total]);
 	}
 	
 	
