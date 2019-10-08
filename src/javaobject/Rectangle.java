@@ -52,8 +52,8 @@ public class Rectangle extends Figure implements Surfacable{
 
 	@Override
 	public Point[] getPoint() {
-		// TODO Auto-generated method stub
-		return null;
+		Point[] pRect = { p, getPointHautGauche(), getPointHautDroit(), getPointBasDroit() };
+		return pRect;
 	}
 	
 

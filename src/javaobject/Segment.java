@@ -36,8 +36,23 @@ public class Segment extends Figure {
 		return str;
 	}
 	
-	public int getLPoint() {
-		return new Point()
+	/**
+	 * 
+	 * @return
+	 */
+	public Point getOtherPoint() {
+		Point temp = null;
+		if(this.horizontale) {
+			temp = new Point();
+			temp.setX( (p.getX() + this.longueur));
+			temp.setY( p.getY());
+		}
+		else {
+			temp = new Point();
+			temp.setY( (p.getY() + this.longueur));
+			temp.setX( p.getX());
+		}
+		return temp;
 	}
 	
 	
@@ -49,15 +64,13 @@ public class Segment extends Figure {
 
 	@Override
 	public String getType() {
-		return getType();	
+		return super.getType();	
 		}
 
 	@Override
 	public Point[] getPoint() {
-	
-		Point[] pSegment = { p, new Point() };
-		
-		return null;
+		Point[] pSegment = { p, getOtherPoint() };
+		return pSegment;
 		
 	}
 

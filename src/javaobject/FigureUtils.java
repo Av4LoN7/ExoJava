@@ -71,7 +71,6 @@ public class FigureUtils {
 	
 	public static Point[] getPoint(Figure[] f) {
 		
-		return null;
 	}
 	
 	

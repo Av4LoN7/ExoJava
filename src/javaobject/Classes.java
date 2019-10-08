@@ -48,9 +48,13 @@ public class Classes {
 		System.out.println("\nRond --");
 		System.out.println(Arrays.toString(b.getPoint()));
 		
-		Segment hp3 = FigureUtils.getRandomSegment();
-		hp3.getPoint();
-
+		Segment seg1 = FigureUtils.getRandomSegment();
+		System.out.println(Arrays.toString(seg1.getPoint()));
+		
+		Rectangle rect2 = FigureUtils.getRandomRectangle();
+		System.out.println(Arrays.toString(rect2.getPoint()));
+		System.out.println(Arrays.toString(c.getPoint()));
+		
 	}
 
 }

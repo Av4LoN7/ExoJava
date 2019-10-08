@@ -10,6 +10,8 @@ public class Carre extends Rectangle implements Surfacable{
 		return "[CARRE [" + super.p.toString() + super.p.toString() + super.p.toString() + super.p.toString() + "]" + " rayon : " + surface();
 	}
 	
+	
+	
 	public void affiche() {
 		System.out.println(this.toString());
 	}
@@ -20,6 +22,12 @@ public class Carre extends Rectangle implements Surfacable{
 	
 	public double surface() {
 		return (super.p.getY() * super.p.getX());
+	}
+	
+	@Override
+	public Point[] getPoint() {
+		Point[] pCarre = { p, getPointHautGauche(), getPointHautDroit(), getPointBasDroit() };
+		return pCarre;
 	}
 	
 }
