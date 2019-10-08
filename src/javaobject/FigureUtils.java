@@ -46,5 +46,34 @@ public class FigureUtils {
 		}
 		return  o;
 	}
+	
+	/**
+	 * Create a random figure then return the surface value
+	 * @return double the surface value 
+	 */
+	public static double getRandomSurfacable() {
+		Object o = getRandomFigure();
+		double temp = 0.0;
+		
+		switch(o.getClass().getSimpleName()) {
+		case "Rond":
+			temp = ((Rond) o).surface();
+			break;
+		case "Rectangle":
+			temp = ((Rectangle) o).surface();
+			break;
+		case "Carre":
+			temp = ((Carre) o).surface();
+			break;
+		}
+		return temp;
+	}
+	
+	public static Point[] getPoint(Figure[] f) {
+		
+		return null;
+	}
+	
+	
 
 }

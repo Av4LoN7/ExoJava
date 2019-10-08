@@ -11,6 +11,8 @@ public abstract class Figure {
 	
 	protected Point p = FigureUtils.getRandomPoint();
 	
+	public abstract Point[] getPoint();
+	
 
 	
 }

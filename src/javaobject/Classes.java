@@ -1,5 +1,6 @@
 package javaobject;
 
+import java.util.Arrays;
 
 public class Classes {
 
@@ -15,12 +16,13 @@ public class Classes {
 		System.out.println(a.toString());
 		b.affiche();
 		r.affiche();
+		
 		System.out.println("\nRandom -----");
 		test.affiche();
 		test2.affiche();
 		System.out.println(test3.toString());
-		System.out.println("\nCarre ------");
 		
+		System.out.println("\nCarre ------");
 		Carre c = new Carre(FigureUtils.getRandomPoint(), 10);
 		System.out.println(c.toString());
 		
@@ -38,6 +40,16 @@ public class Classes {
 			((Rectangle) o).affiche();
 		else
 			((Segment) o).affiche();
+		
+		System.out.println("\nSurface -----");
+		System.out.println(FigureUtils.getRandomSurfacable());
+		
+		System.out.println("\nTableau de point -----");
+		System.out.println("\nRond --");
+		System.out.println(Arrays.toString(b.getPoint()));
+		
+		Segment hp3 = FigureUtils.getRandomSegment();
+		hp3.getPoint();
 
 	}
 

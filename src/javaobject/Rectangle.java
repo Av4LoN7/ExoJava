@@ -1,6 +1,6 @@
 package javaobject;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure implements Surfacable{
 	protected int a, b;
 
 	public Rectangle(Point p, int a, int b) {
@@ -43,6 +43,17 @@ public class Rectangle extends Figure{
 	
 	public void affiche() {
 		System.out.println(toString());
+	}
+
+	@Override
+	public double surface() {
+		return getPointHautDroit().getX() * getPointHautDroit().getY();
+	}
+
+	@Override
+	public Point[] getPoint() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 

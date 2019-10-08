@@ -1,15 +1,13 @@
 package javaobject;
 
-public class Carre extends Rectangle {
-	private Point a;
+public class Carre extends Rectangle implements Surfacable{
 	
 	public Carre(Point a, int c) {
 		super(a, c, c);
-		this.a = a;
 	}	
 	
 	public String toString() {
-		return "[CARRE [" + a.toString() + a.toString() + a.toString() + a.toString() + "]";
+		return "[CARRE [" + super.p.toString() + super.p.toString() + super.p.toString() + super.p.toString() + "]" + " rayon : " + surface();
 	}
 	
 	public void affiche() {
@@ -18,6 +16,10 @@ public class Carre extends Rectangle {
 	
 	public String getType() {
 		return this.getClass().getSimpleName();
+	}
+	
+	public double surface() {
+		return (super.p.getY() * super.p.getX());
 	}
 	
 }

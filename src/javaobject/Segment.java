@@ -1,5 +1,6 @@
 package javaobject;
 
+
 public class Segment extends Figure {
 	
 	private int longueur;
@@ -29,11 +30,16 @@ public class Segment extends Figure {
 	public String toString() {
 		String str ="";
 		if(this.horizontale)
-			str = " SEG [" + super.p.getX() + super.p.getY() + "] à " + "[" + (super.p.getX() + this.longueur)+ "," + super.p.getY() + "]";
-		str = "SEG [" + super.p.getX() + "," + super.p.getY() + "] à " + "[" + super.p.getX() + "," + (super.p.getY() + this.longueur) + "]";
+			str = " SEG [" + p.getX() + p.getY() + "] à " + "[" + (p.getX() + this.longueur)+ "," + p.getY() + "]";
+		str = "SEG [" + p.getX() + "," + p.getY() + "] à " + "[" + p.getX() + "," + (p.getY() + this.longueur) + "]";
 		str += " - Type : " + getType();
 		return str;
 	}
+	
+	public int getLPoint() {
+		return new Point()
+	}
+	
 	
 	@Override
 	public void affiche() {
@@ -43,7 +49,16 @@ public class Segment extends Figure {
 
 	@Override
 	public String getType() {
-		return super.getType();	
+		return getType();	
 		}
+
+	@Override
+	public Point[] getPoint() {
+	
+		Point[] pSegment = { p, new Point() };
+		
+		return null;
+		
+	}
 
 }

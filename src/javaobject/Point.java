@@ -10,7 +10,16 @@ public class Point {
 		this.y = INIT_Y;
 	}
 	public Point(int a, int b) {
+		setX(a);
+		setY(b);
+	}
+	
+	public void setX(int a) {
 		this.x = a;
+	
+	}
+	
+	public void setY(int b) {
 		this.y = b;
 	}
 	
