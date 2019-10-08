@@ -55,6 +55,15 @@ public class Classes {
 		System.out.println(Arrays.toString(rect2.getPoint()));
 		System.out.println(Arrays.toString(c.getPoint()));
 		
+		
+		Figure[] f =  new Figure[4];
+		
+		for(int i = 0; i < f.length; i++) {
+			f[i] = (Figure) FigureUtils.getRandomFigure();
+		}
+		
+		FigureUtils.getPoint(f);
+		
 	}
 
 }

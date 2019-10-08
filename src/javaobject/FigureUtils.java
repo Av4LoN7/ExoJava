@@ -69,9 +69,15 @@ public class FigureUtils {
 		return temp;
 	}
 	
+	
 	public static Point[] getPoint(Figure[] f) {
-		
+		for(int i = 0; i < f.length; i++) {
+			pArray[] = f[i].getPoint();
+		}
+		return pArray[];
 	}
+	
+	
 	
 	
 
