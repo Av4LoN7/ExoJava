@@ -89,6 +89,11 @@ public class FigureUtils {
 		return tempList;
 	}
 	
+	/**
+	 * create and return an ArrayList of xNumber of random figure 
+	 * @param xNumber
+	 * @return arrayList<Figure>
+	 */
 	public static ArrayList<Figure> genere(int xNumber) {
 		
 		ArrayList<Figure> figTempArray = new ArrayList<Figure>();
@@ -96,6 +101,30 @@ public class FigureUtils {
 			figTempArray.add((Figure) getRandomFigure());
 		}
 		return figTempArray;
+	}
+	
+	/**
+	 * Check inside a Dessin if a figure exist from the given point parameter and return it
+	 * if duplicate return one
+	 * if not return null
+	 * @param p3
+	 * @param de2 
+	 * @return Figure / null
+	 */
+	public static Figure getFigureEn(Point p3, Dessin de2) {
+		ArrayList<Figure> figTemp = new ArrayList<Figure>();
+		for( Figure test: de2.getFigure()) {
+			if(test.couvre(p3)) {
+				figTemp.add(test);
+			}
+		}
+		System.out.println(figTemp);
+		System.out.println(p3.getX() + " - " + p3.getY());
+		if(figTemp.size() > 0) {
+			return figTemp.get(0);
+		} else {
+			return null;
+		}	
 	}
 	
 	

@@ -77,4 +77,9 @@ public class Segment extends Figure {
 		
 	}
 
+	@Override
+	public boolean couvre(Point p2) {
+		return (p.getX() == p2.getX() && p.getY() == p2.getY());
+	}
+
 }

@@ -14,6 +14,9 @@ public abstract class Figure {
 	
 	public abstract ArrayList<Point> getPoint();
 	
+	public abstract boolean couvre(Point p2);
+	
+	
 
 	
 }

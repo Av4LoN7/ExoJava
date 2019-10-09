@@ -30,13 +30,13 @@ public class Rectangle extends Figure implements Surfacable{
 		return super.p;
 	}
 	public Point getPointBasDroit() {
-		return new Point((super.p.getX() + 12) , (super.p.getY()));
+		return new Point((p.getX() + 12) , (p.getY()));
 	}
 	public Point getPointHautGauche() {
-		return new Point(super.p.getX(), (super.p.getY() + 10 ));
+		return new Point(p.getX(), (p.getY() + 10 ));
 	}
 	public Point getPointHautDroit() {
-		return new Point( (super.p.getX() + 12), (super.p.getY() + 10));
+		return new Point( (p.getX() + 12), (p.getY() + 10));
 	}
 
 	public String toString() {
@@ -60,6 +60,11 @@ public class Rectangle extends Figure implements Surfacable{
 			pRect.add(getPointHautDroit());
 			pRect.add(getPointBasDroit());
 		return pRect;
+	}
+
+	@Override
+	public boolean couvre(Point p2) {
+		return (p.getX() == p2.getX() && p.getY() == p2.getY());
 	}
 	
 

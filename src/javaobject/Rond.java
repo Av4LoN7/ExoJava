@@ -38,4 +38,9 @@ public class Rond extends Figure implements Surfacable {
 		tabR.add(p);
 		return tabR;
 	}
+
+	@Override
+	public boolean couvre(Point p2) {
+		return (p.getX() == p2.getX() && p.getY() == p2.getY());
+	}
 }

@@ -55,7 +55,9 @@ public class Classes {
 		
 		
 		Figure[] f =  new Figure[4];
+		
 		Figure figPoint = (Figure) FigureUtils.getRandomFigure();
+		Figure figPoint2 = (Figure) FigureUtils.getRandomFigure();
 		
 		for(int i = 0; i < f.length; i++) {
 			f[i] = (Figure) FigureUtils.getRandomFigure();
@@ -63,12 +65,16 @@ public class Classes {
 		System.out.println("\nTableau de figure + ellipse -----");
 		System.out.println(FigureUtils.getPoint(f));
 		System.out.println(FigureUtils.getPoint(figPoint, figPoint));
-		Figure figPoint2 = (Figure) FigureUtils.getRandomFigure();
+		
 		System.out.println("\nCollection de figure -----");
 		Dessin des = new Dessin();
 		System.out.println(des.addFigure(figPoint));
 		System.out.println(des.addFigure(figPoint2));
 		System.out.println(des.getFigure());
+		
+		System.out.println("\nIterator sur dessin------");
+		//des.
+		System.out.println(FigureUtils.getFigureEn(FigureUtils.getRandomPoint(), des));
 		
 	}
 
