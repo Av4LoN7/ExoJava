@@ -73,7 +73,7 @@ public class FigureUtils {
 	}
 	
 	
-	public static Point[] getPoint(Figure[] f) {
+	public static Point[] getPoint(Figure... f) {
 		int total = 0;
 		for(int i = 0; i < f.length; i++) {
 			Point[] pointTemp;

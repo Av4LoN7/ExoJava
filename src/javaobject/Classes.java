@@ -57,12 +57,14 @@ public class Classes {
 		
 		
 		Figure[] f =  new Figure[4];
+		Figure figPoint = (Figure) FigureUtils.getRandomFigure();
 		
 		for(int i = 0; i < f.length; i++) {
 			f[i] = (Figure) FigureUtils.getRandomFigure();
 		}
 		System.out.println("\ntableau de figure -----");
 		System.out.println(Arrays.toString(FigureUtils.getPoint(f)));
+		System.out.println(Arrays.toString(FigureUtils.getPoint(figPoint, figPoint)));
 		
 	}
 
