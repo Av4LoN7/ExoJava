@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 public class Dessin {
 	
-	private ArrayList<Figure> figArray;
+	private ArrayList<Figure> figArray = new ArrayList<Figure>();
 
 	public Dessin() {
-		this.figArray = new ArrayList<Figure>();
+		this.figArray = FigureUtils.genere(15);
 	}
 	public boolean addFigure(Figure f) {
 		return figArray.add(f);

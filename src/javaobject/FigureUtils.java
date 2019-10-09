@@ -104,7 +104,7 @@ public class FigureUtils {
 	}
 	
 	/**
-	 * Check inside a Dessin if a figure exist from the given point parameter and return it
+	 * Check inside a Dessin if a figure exist from the given point parameter and return it (the figure)
 	 * if duplicate return one
 	 * if not return null
 	 * @param p3
@@ -118,8 +118,6 @@ public class FigureUtils {
 				figTemp.add(test);
 			}
 		}
-		System.out.println(figTemp);
-		System.out.println(p3.getX() + " - " + p3.getY());
 		if(figTemp.size() > 0) {
 			return figTemp.get(0);
 		} else {
