@@ -1,5 +1,6 @@
 package javaobject;
 
+import java.util.ArrayList;
 
 public class Segment extends Figure {
 	
@@ -68,8 +69,10 @@ public class Segment extends Figure {
 		}
 
 	@Override
-	public Point[] getPoint() {
-		Point[] pSegment = { p, getOtherPoint() };
+	public ArrayList<Point> getPoint() {
+		ArrayList<Point> pSegment = new ArrayList<Point>();
+		pSegment.add(p);
+		pSegment.add(getOtherPoint());
 		return pSegment;
 		
 	}

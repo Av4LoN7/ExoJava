@@ -1,5 +1,7 @@
 package javaobject;
 
+import java.util.ArrayList;
+
 public class Carre extends Rectangle implements Surfacable{
 	
 	public Carre(Point a, int c) {
@@ -25,8 +27,12 @@ public class Carre extends Rectangle implements Surfacable{
 	}
 	
 	@Override
-	public Point[] getPoint() {
-		Point[] pCarre = { p, getPointHautGauche(), getPointHautDroit(), getPointBasDroit() };
+	public ArrayList<Point> getPoint() {
+		ArrayList<Point> pCarre = new ArrayList<Point>();
+		pCarre.add(p);
+		pCarre.add(getPointHautGauche());
+		pCarre.add(getPointHautDroit());
+		pCarre.add(getPointBasDroit());
 		return pCarre;
 	}
 	

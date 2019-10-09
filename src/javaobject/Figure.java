@@ -1,5 +1,6 @@
 package javaobject;
 
+import java.util.ArrayList;
 
 public abstract class Figure {
 	
@@ -11,7 +12,7 @@ public abstract class Figure {
 	
 	protected Point p = FigureUtils.getRandomPoint();
 	
-	public abstract Point[] getPoint();
+	public abstract ArrayList<Point> getPoint();
 	
 
 	

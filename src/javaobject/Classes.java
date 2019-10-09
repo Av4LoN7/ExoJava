@@ -1,7 +1,5 @@
 package javaobject;
 
-import java.util.Arrays;
-
 public class Classes {
 
 	public static void main(String[] args) {
@@ -46,14 +44,14 @@ public class Classes {
 		
 		System.out.println("\nTableau de point -----");
 		System.out.println("\nRond --");
-		System.out.println(Arrays.toString(b.getPoint()));
+		System.out.println(b.getPoint());
 		
 		Segment seg1 = FigureUtils.getRandomSegment();
-		System.out.println(Arrays.toString(seg1.getPoint()));
+		System.out.println(seg1.getPoint());
 		
 		Rectangle rect2 = FigureUtils.getRandomRectangle();
-		System.out.println(Arrays.toString(rect2.getPoint()));
-		System.out.println(Arrays.toString(c.getPoint()));
+		System.out.println(rect2.getPoint());
+		System.out.println(c.getPoint());
 		
 		
 		Figure[] f =  new Figure[4];
@@ -62,9 +60,15 @@ public class Classes {
 		for(int i = 0; i < f.length; i++) {
 			f[i] = (Figure) FigureUtils.getRandomFigure();
 		}
-		System.out.println("\ntableau de figure -----");
-		System.out.println(Arrays.toString(FigureUtils.getPoint(f)));
-		System.out.println(Arrays.toString(FigureUtils.getPoint(figPoint, figPoint)));
+		System.out.println("\nTableau de figure + ellipse -----");
+		System.out.println(FigureUtils.getPoint(f));
+		System.out.println(FigureUtils.getPoint(figPoint, figPoint));
+		Figure figPoint2 = (Figure) FigureUtils.getRandomFigure();
+		System.out.println("\nCollection de figure -----");
+		Dessin des = new Dessin();
+		System.out.println(des.addFigure(figPoint));
+		System.out.println(des.addFigure(figPoint2));
+		System.out.println(des.getFigure());
 		
 	}
 

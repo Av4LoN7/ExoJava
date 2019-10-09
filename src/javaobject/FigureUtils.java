@@ -1,13 +1,11 @@
 package javaobject;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Random;
 
 public class FigureUtils {
 	
-	protected static int rand = (int) (Math.random() * (10 - 1));
+	protected static int rand = new Random().nextInt(100);
 	
 	
 	public static Rond getRandomRond() {	
@@ -73,24 +71,32 @@ public class FigureUtils {
 	}
 	
 	
-	public static Point[] getPoint(Figure... f) {
-		int total = 0;
+	public static ArrayList<Point> getPoint(Figure... f) {
+		/*int total = 0;
 		for(int i = 0; i < f.length; i++) {
 			Point[] pointTemp;
 			pointTemp = f[i].getPoint();
 			total += pointTemp.length;
-		}
+		}*/
 
 		ArrayList<Point> tempList = new ArrayList<Point>();
 
 		for(int i = 0; i < f.length ; i++) {
-			Point[] pointTemp;
+			ArrayList<Point> pointTemp;
 			pointTemp = f[i].getPoint();
-			Collections.addAll(tempList, pointTemp);
+			tempList.addAll(pointTemp);
 		}
-		return tempList.toArray(new Point[total]);
+		return tempList;
 	}
 	
+	public static ArrayList<Figure> genere(int xNumber) {
+		
+		ArrayList<Figure> figTempArray = new ArrayList<Figure>();
+		for(int i =0; i < xNumber; i++) {
+			figTempArray.add((Figure) getRandomFigure());
+		}
+		return figTempArray;
+	}
 	
 	
 	

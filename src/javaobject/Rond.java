@@ -1,5 +1,7 @@
 package javaobject;
 
+import java.util.ArrayList;
+
 public class Rond extends Figure implements Surfacable {
 
 	private int b, r;
@@ -18,7 +20,7 @@ public class Rond extends Figure implements Surfacable {
 	}
 
 	public String toString() {
-		return "[ROND [" + super.p.getX() + "," + super.p.getY() + "], " + this.r + "] - Type: " + super.getType() + " rayon : " + surface();
+		return "[ROND [" + p.getX() + "," + p.getY() + "], " + this.r + "] - Type: " + getType() + " rayon : " + surface();
 	}
 
 	public void affiche() {
@@ -31,8 +33,9 @@ public class Rond extends Figure implements Surfacable {
 	}
 
 	@Override
-	public Point[] getPoint() {
-		Point[] tabR = { super.p };
+	public ArrayList<Point> getPoint() {
+		ArrayList<Point> tabR = new ArrayList<Point>();
+		tabR.add(p);
 		return tabR;
 	}
 }

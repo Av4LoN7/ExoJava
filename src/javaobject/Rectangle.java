@@ -1,5 +1,7 @@
 package javaobject;
 
+import java.util.ArrayList;
+
 public class Rectangle extends Figure implements Surfacable{
 	protected int a, b;
 
@@ -51,8 +53,12 @@ public class Rectangle extends Figure implements Surfacable{
 	}
 
 	@Override
-	public Point[] getPoint() {
-		Point[] pRect = { p, getPointHautGauche(), getPointHautDroit(), getPointBasDroit() };
+	public ArrayList<Point> getPoint() {
+		ArrayList<Point> pRect = new ArrayList<Point>();
+			pRect.add(p);
+			pRect.add(getPointHautGauche());
+			pRect.add(getPointHautDroit());
+			pRect.add(getPointBasDroit());
 		return pRect;
 	}
 	
