@@ -9,10 +9,8 @@ public class Carre extends Rectangle implements Surfacable{
 	}	
 	
 	public String toString() {
-		return "[CARRE [" + super.p.toString() + super.p.toString() + super.p.toString() + super.p.toString() + "]" + " rayon : " + surface();
+		return "[CARRE [" + p.toString() + p.toString() + p.toString() + p.toString() + "]" + " rayon : " + surface();
 	}
-	
-	
 	
 	public void affiche() {
 		System.out.println(this.toString());
@@ -23,7 +21,7 @@ public class Carre extends Rectangle implements Surfacable{
 	}
 	
 	public double surface() {
-		return (super.p.getY() * super.p.getX());
+		return (p.getY() * p.getX());
 	}
 	
 	@Override

@@ -43,4 +43,35 @@ public class Rond extends Figure implements Surfacable {
 	public boolean couvre(Point p2) {
 		return (p.getX() == p2.getX() && p.getY() == p2.getY());
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + b;
+		result = prime * result + r;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!super.equals(obj)) {
+			return false;
+		}
+		if (!(obj instanceof Rond)) {
+			return false;
+		}
+		Rond other = (Rond) obj;
+		if (b != other.b) {
+			return false;
+		}
+		if (r != other.r) {
+			return false;
+		}
+		return true;
+	}
+	
 }

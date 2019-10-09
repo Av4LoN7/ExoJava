@@ -67,5 +67,32 @@ public class Rectangle extends Figure implements Surfacable{
 		return (p.getX() == p2.getX() && p.getY() == p2.getY());
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!super.equals(obj)) {
+			return false;
+		}
+		if (!(obj instanceof Rectangle) && !(obj instanceof Carre)) {
+			return false;
+		}
+		Rectangle other = (Rectangle) obj;
+		if(this.getPointBasGauche() != other.getPointBasGauche()) {
+			return false;
+		}
+		if(this.getPointBasDroit() != other.getPointBasDroit()) {
+			return false;
+		}
+		if(this.getPointHautDroit() != other.getPointHautDroit()) {
+			return false;
+		}
+		if(this.getPointHautGauche() != other.getPointHautGauche()) {
+			return false;
+		}
+		return true;
+	}
+	
 
 }

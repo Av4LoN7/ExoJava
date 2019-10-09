@@ -8,14 +8,14 @@ public class Dessin {
 	private ArrayList<Figure> figArray = new ArrayList<Figure>();
 
 	public Dessin() {
-		this.figArray = FigureUtils.genere(15);
+		this.figArray = FigureUtils.genere(30);
 	}
 	public boolean addFigure(Figure f) {
 		return figArray.add(f);
 	}
 	
 	/**
-	 * Return an arrayList of Figure because doublon is authorized and the list can be reused wen needed
+	 * Return an arrayList of Figure because duplicate is authorized and the list can be reused when needed
 	 * @return ArrayList<Figure>
 	 */
 	public ArrayList<Figure> getFigure(){

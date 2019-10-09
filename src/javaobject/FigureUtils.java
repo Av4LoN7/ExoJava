@@ -5,23 +5,23 @@ import java.util.Random;
 
 public class FigureUtils {
 	
-	protected static int rand = new Random().nextInt(100);
+	//protected static int rand = new Random().nextInt(100);
 	
 	
 	public static Rond getRandomRond() {	
-		return new Rond(getRandomPoint(), rand);
+		return new Rond(getRandomPoint(), new Random().nextInt(10));
 	}
 	public static Rectangle getRandomRectangle() {
-		return new Rectangle(getRandomPoint(),rand, rand);
+		return new Rectangle(getRandomPoint(),new Random().nextInt(10), new Random().nextInt(10));
 	}
 	public static Point getRandomPoint() {
-		return new Point(rand, rand);
+		return new Point(new Random().nextInt(10), new Random().nextInt(10));
 	}
 	public static Carre getRandomCarre() {
-		return new Carre(getRandomPoint(), rand);
+		return new Carre(getRandomPoint(), new Random().nextInt(10));
 	}
 	public static Segment getRandomSegment() {
-		return new Segment(rand, true);
+		return new Segment(new Random().nextInt(10), true);
 	}
 	
 	/**
@@ -118,7 +118,7 @@ public class FigureUtils {
 				figTemp.add(test);
 			}
 		}
-		if(figTemp.size() > 0) {
+		if(figTemp.size() >= 1) {
 			return figTemp.get(0);
 		} else {
 			return null;

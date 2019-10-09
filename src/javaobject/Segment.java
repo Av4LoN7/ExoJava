@@ -19,6 +19,10 @@ public class Segment extends Figure {
 	public void setLongeur(int longeur) {
 		this.longueur = longeur;
 	}
+	
+	public int getFin(int value) {
+		return value + this.longueur;
+	}
 
 	public boolean isHorizontale() {
 		return horizontale;
@@ -82,4 +86,27 @@ public class Segment extends Figure {
 		return (p.getX() == p2.getX() && p.getY() == p2.getY());
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!super.equals(obj)) {
+			return false;
+		}
+		if (!(obj instanceof Segment)) {
+			return false;
+		}
+		Segment other = (Segment) obj;
+		if ( p.getX() != other.p.getX()) {
+			return false;
+		}
+		if ( p.getY() != other.p.getY()) {
+			return false;
+		}
+		if(this.getFin(this.longueur) != other.getFin(other.longueur)) {
+			return false;
+		}
+		return true;
+	}
 }
