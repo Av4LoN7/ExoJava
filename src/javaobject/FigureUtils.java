@@ -1,6 +1,8 @@
 package javaobject;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class FigureUtils {
@@ -124,6 +126,13 @@ public class FigureUtils {
 		} else {
 			return null;
 		}	
+	}
+	
+	public static void triProcheOrigine(Dessin de2){
+		List<Figure> figTemp = new ArrayList<Figure>();
+		figTemp = de2.getFigure();
+		Collections.sort((List) figTemp);
+		System.out.println(figTemp);
 	}
 	
 	

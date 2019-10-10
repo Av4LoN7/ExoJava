@@ -2,7 +2,7 @@ package javaobject;
 
 import java.util.ArrayList;
 
-public class Segment extends Figure {
+public class Segment extends Figure implements Comparable<Figure> {
 	
 	private int longueur;
 	private boolean horizontale;
@@ -112,6 +112,7 @@ public class Segment extends Figure {
 
 	@Override
 	protected double distanceOrigine() {
+		// to do return the smallest distance
 		ArrayList<Point> pTemp = new ArrayList<Point>();
 		pTemp = FigureUtils.getPoint((Figure) this);
 		System.out.println(pTemp + "segment ");
@@ -121,10 +122,17 @@ public class Segment extends Figure {
 				pTemp2.add(p2);
 			}
 		}
+		return p.INIT_X - pTemp2.get(1).getX();
 		
-		
-		String beforeConv = pTemp2.get(0).getX() + "." + pTemp2.get(0).getY();
+		/*String beforeConv = pTemp2.get(0).getX() + "." + pTemp2.get(0).getY();
 		Double finalDouble = Double.parseDouble(beforeConv);
-		return finalDouble;
+		return finalDouble;*/
+	}
+	
+	@Override
+	public int compareTo(Figure o) {
+		double xA = this.distanceOrigine();
+		double xB = (double) o.distanceOrigine();
+		return (int) (xB - xA);
 	}
 }

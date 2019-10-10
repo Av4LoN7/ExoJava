@@ -34,4 +34,11 @@ public class Carre extends Rectangle implements Surfacable, Comparable<Figure>{
 		return pCarre;
 	}
 	
+	@Override
+	public int compareTo(Figure o) {
+		double xA = this.distanceOrigine();
+		double xB = (double) o.distanceOrigine();
+		return (int) (xB - xA);
+	}
+	
 }

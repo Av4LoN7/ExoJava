@@ -76,10 +76,10 @@ public class Rond extends Figure implements Surfacable, Comparable<Figure> {
 
 	@Override
 	protected double distanceOrigine() {
-		if(p.getX() < p.INIT_X && p.getY() < p.INIT_Y) {
+		if(p.getX() < p.INIT_X && p.getY() < p.INIT_Y)
 			return p.getX();
-		}
 		return 0.0;
+		
 		
 	}
 

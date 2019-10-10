@@ -98,13 +98,14 @@ public class Rectangle extends Figure implements Surfacable, Comparable<Figure>{
 	protected double distanceOrigine() {
 		ArrayList<Point> pTemp = new ArrayList<Point>();
 		pTemp = FigureUtils.getPoint((Figure) this);
-		ArrayList<Point> pTemp2 = new ArrayList<Point>();
+		double resultat = 0;
 		for(Point p2 : pTemp) {
-			if( p2.getX() < p.INIT_X && p2.getY() < p.INIT_Y) {
-				pTemp2.add(p2);
-			}
+			resultat = p2.distance(p);
 		}
-		return pTemp2.get(0).getX() - p.getX();
+		return resultat;
+		//return pTemp2.get(0).getX() - p.getX();
+		//System.out.println(pTemp2);
+		//return (p.INIT_X - pTemp2.get(2).getX());
 		/*String beforeConv = pTemp2.get(0).getX() + "." + pTemp2.get(0).getX();
 		Double finalDouble = Double.parseDouble(beforeConv);
 		return finalDouble;*/
@@ -112,8 +113,9 @@ public class Rectangle extends Figure implements Surfacable, Comparable<Figure>{
 
 	@Override
 	public int compareTo(Figure o) {
-		// TODO Auto-generated method stub
-		return 0;
+		double xA = this.distanceOrigine();
+		double xB = (double) o.distanceOrigine();
+		return (int) (xB - xA);
 	}
 	
 

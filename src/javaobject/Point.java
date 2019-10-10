@@ -49,12 +49,16 @@ public class Point {
 	}
 	
 	public double distance(Point p2) {
-		if(this.x < p2.getX()) {
-			System.out.println(p2.getX());
-			System.out.println(this.getX());
-			return ( (p2.getX() - this.x));	
+		double temp1 = 0;
+		double temp2 = 0;
+		if(this.x < p2.INIT_X && this.y < p2.INIT_Y) {
+			temp1 = ( (p2.INIT_X - this.x));
+			temp2 = ( (p2.INIT_Y - this.y)) ;	
 		}
-		return 0.0;
+		if(temp1 > temp2) {
+			return temp2;
+		}
+		return temp1;
 			
 	}
 	
