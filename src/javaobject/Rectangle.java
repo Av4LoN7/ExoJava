@@ -2,7 +2,7 @@ package javaobject;
 
 import java.util.ArrayList;
 
-public class Rectangle extends Figure implements Surfacable, Comparable<Figure>{
+public class Rectangle extends Figure implements Surfacable{
 	protected int a, b;
 
 	public Rectangle(Point p, int a, int b) {
@@ -111,12 +111,6 @@ public class Rectangle extends Figure implements Surfacable, Comparable<Figure>{
 		return finalDouble;*/
 	}
 
-	@Override
-	public int compareTo(Figure o) {
-		double xA = this.distanceOrigine();
-		double xB = (double) o.distanceOrigine();
-		return (int) (xB - xA);
-	}
 	
 
 }

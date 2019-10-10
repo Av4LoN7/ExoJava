@@ -2,7 +2,7 @@ package javaobject;
 
 import java.util.ArrayList;
 
-public class Rond extends Figure implements Surfacable, Comparable<Figure> {
+public class Rond extends Figure implements Surfacable{
 
 	private int b, r;
 
@@ -83,11 +83,4 @@ public class Rond extends Figure implements Surfacable, Comparable<Figure> {
 		
 	}
 
-	@Override
-	public int compareTo(Figure o) {
-		double xA = this.distanceOrigine();
-		double xB = (double) o.distanceOrigine();
-		return (int) (xB - xA);
-	}
-	
 }

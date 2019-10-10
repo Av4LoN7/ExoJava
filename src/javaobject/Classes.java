@@ -77,7 +77,8 @@ public class Classes {
 		System.out.println(test3.distance(test2.p));
 		System.out.println(rect2.distanceOrigine());
 		System.out.println(seg1.distanceOrigine());
-		FigureUtils.triProcheOrigine(des);
+		System.out.println(des.getFigure());
+		System.out.println(FigureUtils.triProcheOrigine(des));
 	}
 
 }

@@ -2,7 +2,7 @@ package javaobject;
 
 import java.util.ArrayList;
 
-public abstract class Figure {
+public abstract class Figure implements Comparable<Figure> {
 	
 	public abstract void affiche();
 	
@@ -43,6 +43,11 @@ public abstract class Figure {
 			return false;
 		}
 		return true;
+	}
+	
+	@Override
+	public int compareTo(Figure o) {
+		return (int) ( this.distanceOrigine() - o.distanceOrigine());
 	}
 
 	

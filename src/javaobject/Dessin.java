@@ -8,7 +8,7 @@ public class Dessin {
 	private ArrayList<Figure> figArray = new ArrayList<Figure>();
 
 	public Dessin() {
-		this.figArray = FigureUtils.genere(30);
+		this.figArray = FigureUtils.genere(10);
 	}
 	public boolean addFigure(Figure f) {
 		return figArray.add(f);

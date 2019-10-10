@@ -2,6 +2,7 @@ package javaobject;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 
@@ -128,11 +129,12 @@ public class FigureUtils {
 		}	
 	}
 	
-	public static void triProcheOrigine(Dessin de2){
-		List<Figure> figTemp = new ArrayList<Figure>();
-		figTemp = de2.getFigure();
-		Collections.sort((List) figTemp);
-		System.out.println(figTemp);
+	public static Collection<Figure> triProcheOrigine(Dessin de2){
+		List<Figure> figTemp = new ArrayList<Figure>(de2.getFigure());
+		//figTemp = ;
+		Collections.sort(figTemp);
+		return figTemp;
+		//System.out.println(figTemp);
 	}
 	
 	
