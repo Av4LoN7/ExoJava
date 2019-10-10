@@ -15,7 +15,8 @@ public class FigureUtils {
 		return new Rectangle(getRandomPoint(),new Random().nextInt(10), new Random().nextInt(10));
 	}
 	public static Point getRandomPoint() {
-		return new Point(new Random().nextInt(10), new Random().nextInt(10));
+		int rand = new Random().nextInt(10);
+		return new Point(rand, rand);
 	}
 	public static Carre getRandomCarre() {
 		return new Carre(getRandomPoint(), new Random().nextInt(10));

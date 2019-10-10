@@ -109,4 +109,22 @@ public class Segment extends Figure {
 		}
 		return true;
 	}
+
+	@Override
+	protected double distanceOrigine() {
+		ArrayList<Point> pTemp = new ArrayList<Point>();
+		pTemp = FigureUtils.getPoint((Figure) this);
+		System.out.println(pTemp + "segment ");
+		ArrayList<Point> pTemp2 = new ArrayList<Point>();
+		for(Point p2 : pTemp) {
+			if( p2.getX() < p.INIT_X && p2.getY() < p.INIT_Y) {
+				pTemp2.add(p2);
+			}
+		}
+		
+		
+		String beforeConv = pTemp2.get(0).getX() + "." + pTemp2.get(0).getY();
+		Double finalDouble = Double.parseDouble(beforeConv);
+		return finalDouble;
+	}
 }

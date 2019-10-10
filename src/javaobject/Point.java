@@ -2,8 +2,8 @@ package javaobject;
 
 public class Point {
 	private int x, y;
-	private final int INIT_X = 25;
-	private final int INIT_Y = 25;
+	protected final int INIT_X = 25;
+	protected final int INIT_Y = 25;
 	
 	public Point() {
 		this.x = INIT_X;
@@ -38,6 +38,7 @@ public class Point {
 	public boolean isEqual(Point b) {
 		return ( (this.getX() == b.getX()) && this.getY() == b.getY());
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -47,7 +48,17 @@ public class Point {
 		return result;
 	}
 	
-	@Override
+	public double distance(Point p2) {
+		if(this.x < p2.getX()) {
+			System.out.println(p2.getX());
+			System.out.println(this.getX());
+			return ( (p2.getX() - this.x));	
+		}
+		return 0.0;
+			
+	}
+	
+	/*@Override
 	public boolean equals(Object obj) {
 		if (this == obj) {
 			return true;
@@ -63,7 +74,7 @@ public class Point {
 			return false;
 		}
 		return true;
-	}
+	}*/
 	
 	
 	

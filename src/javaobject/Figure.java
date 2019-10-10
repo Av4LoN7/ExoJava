@@ -12,9 +12,11 @@ public abstract class Figure {
 	
 	protected Point p = FigureUtils.getRandomPoint();
 	
-	public abstract ArrayList<Point> getPoint();
+	protected abstract ArrayList<Point> getPoint();
 	
-	public abstract boolean couvre(Point p2);
+	protected abstract boolean couvre(Point p2);
+	
+	protected abstract double distanceOrigine();
 
 	@Override
 	public int hashCode() {
@@ -42,6 +44,7 @@ public abstract class Figure {
 		}
 		return true;
 	}
+
 	
 	
 	

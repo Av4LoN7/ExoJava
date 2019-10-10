@@ -73,6 +73,10 @@ public class Classes {
 		System.out.println("\nIterator sur dessin------");
 		System.out.println(FigureUtils.getFigureEn(FigureUtils.getRandomPoint(), des));
 		
+		System.out.println("\nComparable + distance ----");
+		System.out.println(test3.distance(test2.p));
+		System.out.println(rect2.distanceOrigine());
+		System.out.println(seg1.distanceOrigine());
 	}
 
 }

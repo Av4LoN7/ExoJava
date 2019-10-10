@@ -2,7 +2,7 @@ package javaobject;
 
 import java.util.ArrayList;
 
-public class Carre extends Rectangle implements Surfacable{
+public class Carre extends Rectangle implements Surfacable, Comparable<Figure>{
 	
 	public Carre(Point a, int c) {
 		super(a, c, c);
