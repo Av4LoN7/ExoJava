@@ -89,6 +89,8 @@ public class Classes {
 		LocalDate now = LocalDate.now();
 		Period p = Period.between(dateAnniv, now);
 		System.out.println(p.getYears());
+		System.out.println("\nMap Collection");
+		System.out.println(FigureUtils.getRandomFigureInMap());
 		
 		
 	}

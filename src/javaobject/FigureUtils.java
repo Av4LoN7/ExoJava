@@ -3,8 +3,10 @@ package javaobject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class FigureUtils {
@@ -151,6 +153,13 @@ public class FigureUtils {
 				};
 		});
 			return indexTemp;
+	}
+	
+	public static Map<Integer, Figure> getRandomFigureInMap() {
+		Map<Integer,Figure> figMap = new HashMap<Integer,Figure>();
+		Figure temp = (Figure) FigureUtils.getRandomFigure();
+		figMap.put(1, temp);
+		return figMap;
 	}
 	
 }
