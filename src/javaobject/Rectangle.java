@@ -27,7 +27,7 @@ public class Rectangle extends Figure implements Surfacable{
 	}
 
 	public Point getPointBasGauche() {
-		return super.p;
+		return p;
 	}
 	public Point getPointBasDroit() {
 		return new Point((p.getX() + 12) , (p.getY()));

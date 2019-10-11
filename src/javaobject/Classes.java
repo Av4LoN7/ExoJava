@@ -1,5 +1,7 @@
 package javaobject;
 
+import java.time.*;
+
 public class Classes {
 
 	public static void main(String[] args) {
@@ -79,6 +81,16 @@ public class Classes {
 		System.out.println(seg1.distanceOrigine());
 		System.out.println(des.getFigure());
 		System.out.println(FigureUtils.triProcheOrigine(des));
+		System.out.println("\nSurface ----");
+		System.out.println(FigureUtils.triDominant(des));
+		
+		System.out.println("\nDate et test de date ----- ");
+		LocalDate dateAnniv = LocalDate.of(1984, 7, 7);
+		LocalDate now = LocalDate.now();
+		Period p = Period.between(dateAnniv, now);
+		System.out.println(p.getYears());
+		
+		
 	}
 
 }

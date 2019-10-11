@@ -2,6 +2,7 @@ package javaobject;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Collection;
 import java.util.List;
 import java.util.Random;
@@ -131,13 +132,25 @@ public class FigureUtils {
 	
 	public static Collection<Figure> triProcheOrigine(Dessin de2){
 		List<Figure> figTemp = new ArrayList<Figure>(de2.getFigure());
-		//figTemp = ;
 		Collections.sort(figTemp);
 		return figTemp;
-		//System.out.println(figTemp);
 	}
 	
+	public static Collection<Figure> triDominant(Dessin de2){
+			List<Figure> figTemp = new ArrayList<Figure>(de2.getFigure());
+			List<Figure> indexTemp = new ArrayList<Figure>();
+			for(Figure f : figTemp) {
+				if(f.surface() > 0.0) {
+					indexTemp.add(f);
+				}
+			}
+			Collections.sort(indexTemp,  new Comparator<Figure>() {
+				@Override
+				public int compare(Figure o1, Figure o2) {
+					return (int) (o1.surface() - o2.surface());
+				};
+		});
+			return indexTemp;
+	}
 	
-	
-
 }

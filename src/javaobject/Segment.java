@@ -125,5 +125,10 @@ public class Segment extends Figure{
 		Double finalDouble = Double.parseDouble(beforeConv);
 		return finalDouble;*/
 	}
+
+	@Override
+	protected double surface() {
+		return 0.0;
+	}
 	
 }

@@ -15,6 +15,8 @@ public abstract class Figure implements Comparable<Figure> {
 	protected abstract ArrayList<Point> getPoint();
 	
 	protected abstract boolean couvre(Point p2);
+
+	protected abstract double surface();
 	
 	protected abstract double distanceOrigine();
 
