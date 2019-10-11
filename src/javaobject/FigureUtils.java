@@ -155,11 +155,17 @@ public class FigureUtils {
 			return indexTemp;
 	}
 	
-	public static Map<Integer, Figure> getRandomFigureInMap() {
-		Map<Integer,Figure> figMap = new HashMap<Integer,Figure>();
+	public static Map<String, Figure> getRandomFigureInMap() {
+		Map<String,Figure> figMap = new HashMap<String,Figure>();
 		Figure temp = (Figure) FigureUtils.getRandomFigure();
-		figMap.put(1, temp);
+		figMap.put("1", temp);
 		return figMap;
 	}
 	
+	public static Figure getId(String id, Map<String, Figure> tab) {
+		if(tab.containsKey(id)) {
+			return tab.get(id);
+		}
+		return null;
+	}
 }

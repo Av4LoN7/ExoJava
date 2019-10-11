@@ -1,6 +1,7 @@
 package javaobject;
 
 import java.time.*;
+import java.util.Map;
 
 public class Classes {
 
@@ -90,7 +91,9 @@ public class Classes {
 		Period p = Period.between(dateAnniv, now);
 		System.out.println(p.getYears());
 		System.out.println("\nMap Collection");
-		System.out.println(FigureUtils.getRandomFigureInMap());
+		Map<String, Figure> testMap = FigureUtils.getRandomFigureInMap();
+		System.out.println(testMap);
+		System.out.println(FigureUtils.getId("1", testMap));
 		
 		
 	}
